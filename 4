@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+class point
+{
+private:
+    int p1;
+    int p2;
+    int p3;
+    int p4;
+public:
+    point(){
+        p1=0;
+        p2=0;
+        p3=0;
+        p4=0;
+    }
+public:
+    void pointt(int a,int b)
+    {
+        p1=a;p3=b;
+    }
+    void set_x(int a)
+    {
+        p2=p1;
+        p4=p3;
+    }
+   void set_y(int a){
+    p2=p1;
+       p4=p3;
+    }
+void outputter()
+{
+    cout<<p1<<" "<<p2<<" "<<p3<<" "<<p4<<endl;
+    }
+};
+int main() {
+    point x;
+    point y;
+    x.pointt(2,4);
+    y.pointt(3,5);
+    x.set_x(3);
+    y.set_y(4);
+    cout<<" x coordinates are  ";
+    x.outputter();
+    cout<<"y coordinates are";
+    y.outputter();
+    return 0;
+}
